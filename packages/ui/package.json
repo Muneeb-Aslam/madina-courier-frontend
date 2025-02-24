@@ -4,8 +4,8 @@
   "private": true,
   "exports": {
     "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    "./input": "./src/input.tsx",
+    "./form": "./src/form.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -15,6 +15,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@repo/utils": "workspace:*",
     "@turbo/gen": "^2.4.0",
     "@types/node": "^22.13.0",
     "@types/react": "19.0.8",
@@ -23,7 +24,13 @@
     "typescript": "5.7.3"
   },
   "dependencies": {
+    "@hookform/resolvers": "^4.1.1",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
+    "zod": "^3.24.2"
   }
 }

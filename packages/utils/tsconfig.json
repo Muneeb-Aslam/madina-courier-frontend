@@ -1,0 +1,17 @@
+
+{
+  "compilerOptions": {
+    "target": "esnext",         
+    "module": "esnext",         
+    "moduleResolution": "node",  // Resolves modules like Node.js
+    "strict": true,              // Enables strict type checking
+    "esModuleInterop": true,     // Allows default imports from modules with no default export
+    "skipLibCheck": true,        // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",          // Outputs compiled files to the 'dist' folder
+    "declaration": true,         // Generates declaration files
+    "declarationDir": "./dist/types"  // Outputs type declaration files
+  },
+  "include": ["src/**/*.ts"],   // Includes all .ts files in the 'src' folder
+  "exclude": ["node_modules"]   // Excludes node_modules folder
+}
