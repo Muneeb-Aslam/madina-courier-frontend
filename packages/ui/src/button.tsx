@@ -7,13 +7,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-btn-bg text-offwhite font-bold",
+        default: "bg-primary text-black font-bold",
+        secondary: "bg-secondary text-black font-bold",
+        destructive: "bg-primary text-destructive font-bold",
+        muted: "bg-muted text-black font-bold",
       },
       size: {
         default: "h-10 px-8 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        sm: "h-9 px-6",
+        lg: "h-12 px-12",
       },
     },
     defaultVariants: {

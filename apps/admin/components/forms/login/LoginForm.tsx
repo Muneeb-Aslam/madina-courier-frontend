@@ -55,6 +55,15 @@ export default function LoginForm() {
           )}
         />
         <Button type="submit">Log In</Button>
+        <Button type="submit" variant={"secondary"} size={"lg"}>
+          Log In
+        </Button>
+        <Button type="submit" variant={"muted"} size={"sm"}>
+          Log In
+        </Button>
+        <Button type="submit" variant={"destructive"} size={"sm"}>
+          Log In
+        </Button>
       </form>
     </Form>
   );
