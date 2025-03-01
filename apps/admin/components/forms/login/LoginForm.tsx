@@ -27,41 +27,45 @@ export default function LoginForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter email" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter password" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Log In</Button>
-        <Button type="submit" variant={"secondary"} size={"lg"}>
-          Log In
-        </Button>
-        <Button type="submit" variant={"muted"} size={"sm"}>
-          Log In
-        </Button>
-        <Button type="submit" variant={"destructive"} size={"sm"}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="p-spacing-xl shadow-2xl rounded-xl h-max w-[25rem] bg-white flex flex-col justify-start items-start gap-spacing-m"
+      >
+        <div className="w-full flex flex-col gap-spacing-xxs">
+          <p className="text-2xl font-bold text-black">Login</p>
+          <p className="text-md text-black">
+            Enter your email and password to login
+          </p>
+        </div>
+        <div className="w-full mt-spacing-md flex flex-col gap-spacing-l">
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem className="">
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter email" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Password</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter password" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <Button type="submit" className="self-center mt-spacing-m">
           Log In
         </Button>
       </form>

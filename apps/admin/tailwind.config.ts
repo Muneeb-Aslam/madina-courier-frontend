@@ -13,6 +13,9 @@ const config: Pick<Config, "presets"> = {
       theme: {
         extend: {
           ...sharedConfig?.theme?.extend,
+          spacing: {
+            ...sharedConfig?.theme?.extend.spacing,
+          },
         },
       },
     },
