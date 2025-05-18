@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+import sharedConfig from "../../packages/tailwind-config/tailwind.config";
 export default {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,7 +11,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      ...sharedConfig?.theme?.extend,
+      spacing: {
+        ...sharedConfig?.theme?.extend.spacing,
+      },
+    },
   },
   plugins: [],
 };
